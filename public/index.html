@@ -4,10 +4,51 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
     <title>Pig Game</title>
     <link rel="stylesheet" href="./build/tailwind.css" />
   </head>
-  <body>
+  <body
+    class="h-screen container flex justify-center items-center bg-gradient-to-tl from-[#753682] to-[#bf2e34] font-Nunito uppercase"
+  >
+    <main
+      class="flex relative bg-[#ffffff59] overflow-hidden w-[1000px] h-[600px] rounded-lg shadow-2xl"
+    >
+      <div class="w-1/2 text-center bg-[#ffffff66] py-28">
+        <h1 class="text-5xl mb-6">player 1</h1>
+        <span class="text-[#c7365f] text-7xl mb-32 inline-block">0</span>
+        <div
+          class="bg-[#c7365f] flex justify-center gap-y-2 flex-col text-white mx-auto text-base w-56 h-32 rounded-lg"
+        >
+          <h4 class="text-xl">current</h4>
+          <span class="text-4xl">0</span>
+        </div>
+      </div>
+      <div class="w-1/2 text-center py-28">
+        <h1 class="text-5xl mb-6">player 1</h1>
+        <span class="text-[#c7365f] text-7xl mb-32 inline-block">0</span>
+        <div
+          class="bg-[#c7365f] flex justify-center gap-y-2 flex-col text-white mx-auto text-base w-56 h-32 rounded-lg"
+        >
+          <h4 class="text-xl">current</h4>
+          <span class="text-4xl">0</span>
+        </div>
+      </div>
+
+      <button class="btn absolute top-10">🔄 New game</button>
+      <img
+        src="/src/assets/img/dice-5.png"
+        alt="Playing dice"
+        class="h-24 absolute top-40 -translate-x-1/2 left-1/2"
+      />
+      <button class="btn absolute bottom-44">🎲 Roll dice</button>
+      <button class="btn absolute bottom-24">📥 Hold</button>
+    </main>
     <script src="/src/js/script.js"></script>
   </body>
 </html>
