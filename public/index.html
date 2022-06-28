@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <title>Pig Game</title>
@@ -17,37 +17,40 @@
     class="h-screen container flex justify-center items-center bg-gradient-to-tl from-[#753682] to-[#bf2e34] font-Nunito uppercase"
   >
     <main
-      class="flex relative bg-[#ffffff59] overflow-hidden w-[1000px] h-[600px] rounded-lg shadow-2xl"
+      class="flex relative bg-[#ffffff59] overflow-hidden w-[1000px] h-[580px] rounded-lg shadow-2xl opacity-90"
     >
-      <div class="w-1/2 text-center bg-[#ffffff66] py-28">
-        <h1 class="text-5xl mb-6">player 1</h1>
-        <span class="text-[#c7365f] text-7xl mb-32 inline-block">0</span>
+      <div class="player--active player--0 w-1/2 text-center py-20">
+        <h1 class="text-[42px] mb-7">player 1</h1>
+        <span id="score0El" class="score--0 text-[#c7365f] text-7xl mb-32 inline-block">0</span>
         <div
-          class="bg-[#c7365f] flex justify-center gap-y-2 flex-col text-white mx-auto text-base w-56 h-32 rounded-lg"
+          class="bg-[#c7365f] flex justify-center gap-y-2 flex-col text-white mx-auto text-base w-52 h-28 rounded-lg"
         >
           <h4 class="text-xl">current</h4>
-          <span class="text-4xl">0</span>
+          <span class="current--0 text-4xl">0</span>
         </div>
       </div>
-      <div class="w-1/2 text-center py-28">
-        <h1 class="text-5xl mb-6">player 1</h1>
-        <span class="text-[#c7365f] text-7xl mb-32 inline-block">0</span>
+      <div class="player--1 w-1/2 text-center py-20">
+        <h1 class="text-[42px] mb-7">player 2</h1>
+        <span id="score1El" class="score--1 text-[#c7365f] text-7xl mb-32 inline-block">0</span>
         <div
-          class="bg-[#c7365f] flex justify-center gap-y-2 flex-col text-white mx-auto text-base w-56 h-32 rounded-lg"
+          class="bg-[#c7365f] flex justify-center gap-y-2 flex-col text-white mx-auto text-base w-52 h-28 rounded-lg"
         >
           <h4 class="text-xl">current</h4>
-          <span class="text-4xl">0</span>
+          <span class="current--1 text-4xl">0</span>
         </div>
       </div>
 
-      <button class="btn absolute top-10">🔄 New game</button>
+      <button id="btnNew" class="btn absolute top-10 active:translate-y-[2px] shadow-md">
+        🔄 New game
+      </button>
       <img
         src="/src/assets/img/dice-5.png"
         alt="Playing dice"
-        class="h-24 absolute top-40 -translate-x-1/2 left-1/2"
+        id="dice"
+        class="hidden h-24 absolute top-40 -translate-x-1/2 left-1/2 rounded-lg"
       />
-      <button class="btn absolute bottom-44">🎲 Roll dice</button>
-      <button class="btn absolute bottom-24">📥 Hold</button>
+      <button id="btnRoll" class="btn absolute bottom-[168px]">🎲 Roll dice</button>
+      <button id="btnHold" class="btn absolute bottom-[96px]">📥 Hold</button>
     </main>
     <script src="/src/js/script.js"></script>
   </body>

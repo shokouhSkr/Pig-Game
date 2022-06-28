@@ -4,6 +4,9 @@
 
 @layer components {
   .btn {
-    @apply text-2xl left-1/2 -translate-x-1/2 bg-[#ffffff99] rounded-full px-6 py-1.5;
+    @apply text-2xl left-1/2 -translate-x-1/2 bg-[#ffffff99] rounded-full px-6 py-1.5 active:translate-y-[2px] shadow-md;
+  }
+  .player--active {
+    @apply bg-[#ffffff6e] font-semibold transition-all duration-700;
   }
 }
