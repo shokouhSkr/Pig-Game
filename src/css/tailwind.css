@@ -9,4 +9,7 @@
   .player--active {
     @apply bg-[#ffffff6e] font-semibold transition-all duration-700;
   }
+  .player--winner {
+    @apply bg-[#2f2f2f] text-[#c7365f] font-bold transition-all duration-700;
+  }
 }
